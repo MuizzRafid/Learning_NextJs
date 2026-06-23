@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import ClientProvider from "@/providers/query-client-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,13 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
-        <header className="p-4 border-b ">
-          <nav className="flex gap-4">
-            <Link href={"/"}>Home</Link>
-            <Link href={"/product"}>Products</Link>
-          </nav>
-        </header>
-        {children}
+        <ClientProvider>
+          <header className="p-4 border-b ">
+            <nav className="flex gap-4">
+              <Link href={"/"}>Home</Link>
+              <Link href={"/product"}>Products</Link>
+            </nav>
+          </header>
+          {children}
+        </ClientProvider>
       </body>
     </html>
   );
