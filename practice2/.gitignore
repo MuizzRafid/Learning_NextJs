@@ -42,8 +42,8 @@ next-env.d.ts
 public
 .agents
 
-
 (marketing)
-data-fetching
+
 metadata-example
 optional-catch-all-route
+providers
