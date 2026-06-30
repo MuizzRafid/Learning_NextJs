@@ -5,17 +5,19 @@ import CourseDetails from "@/components/CourseDetails";
 import Footer from "@/components/Footer";
 export default function IeltsCourse() {
   return (
-    <div className="relative">
-      <NavBar />
-      <div className="relative">
-        <CoursePage />
-        {/* other sections */}
-        <CourseDetails></CourseDetails>
-        <div className="absolute top-0 right-10 w-[31%]">
-          <IeltsCourseBanner />
-        </div>
+    <div className="">
+      <div className="fixed top:0  z-50 w-full">
+        <NavBar />
       </div>
-      <Footer />
+      <div className="pt-16 ">
+        <CoursePage />
+
+        <CourseDetails></CourseDetails>
+      </div>
+
+      <div className="z-3">
+        <Footer />
+      </div>
     </div>
   );
 }

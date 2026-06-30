@@ -37,6 +37,7 @@ interface Value {
   profile_image: string;
   thumb: string;
   video_url: string;
+  icon: string;
 }
 export interface Sections {
   type: string;

@@ -32,17 +32,7 @@ export default function IeltsCourseBanner() {
   if (!course || !selectedMedia) return null;
 
   return (
-    <div
-      className="
-    fixed
-    top-32
-    right-10
-    w-[31%]
-    
-    bg-white
-    text-black
-  "
-    >
+    <div className="main-container  bg-white text-black ">
       <div className="w-full border border-gray-300 p-2">
         <div className="pb-4">
           {selectedMedia.resource_type === "video" ? (
